@@ -1,75 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sở Thích Cá Nhân (Maybe)</title>
+    <title>Giới thiệu bản thân</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
+        .container {
+            width: 300px;
             text-align: center;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
+            background: #ffffff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #4CAF50;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .name {
+            font-size: 24px;
+            font-weight: bold;
         }
-        li {
+        .intro {
+            font-size: 16px;
             margin: 10px 0;
         }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-            margin-top: 10px;
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
         }
     </style>
-    <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <header>
-        <h1>Có gì ở đây mà nhìn</h1>
-    
-    </header>
-
-    <section>
-        <h2>🎮 Game</h2>
-        <ul>
-            <li><strong>Liên quân</strong>: Game rác.</li>
-            <li><strong>Genshin Impact</strong>: Game rác nhưng tốt hơn.</li>
-            <li><strong>Teamfight Tactics</strong>: Nơi nhân phẩm lên voi xuống chó.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>🎥 Anime</h2>
-        <ul>
-            <li><strong>No Game No Life</strong>: My fav.</li>
-            <li><strong>Overlord</strong>: Câu chuyện tươi sáng và tích cực.</li>
-            <li><strong>Re: Zero</strong>: Câu chuyện tươi sáng và tích cực hơn cái ở trên.</li>
-        </ul>
-
-    </section>
-
+    <div class="container">
+        <div class="profile-img"></div>
+        <div class="name">Tên của bạn</div>
+        <div class="intro">Tự giới thiệu ngắn gọn về bản thân.</div>
+        <div class="social-links">
+            <a href="#" title="YouTube">Y</a>
+            <a href="#" title="Facebook">F</a>
+            <a href="#" title="Discord">D</a>
+        </div>
+    </div>
 </body>
 </html>
