@@ -3,73 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minigame - Nhấn nhanh!</title>
+    <title>Sở Thích Cá Nhân (Maybe)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f7f7f7;
         }
-        h1 {
-            color: #4CAF50;
-        }
-        #game-button {
+        header {
             background-color: #4CAF50;
             color: white;
-            padding: 15px 30px;
-            font-size: 20px;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        #game-button:active {
-            background-color: #45a049;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Minigame - Nhấn nhanh!</h1>
-    <p>Hãy nhấn vào nút "Bắt đầu" và cố gắng nhấn nút càng nhanh càng tốt!</p>
-    <button id="start-button">Bắt đầu</button>
-    <button id="game-button" style="display:none;">Nhấn tôi!</button>
-    <p id="result"></p>
+    <header>
+        <h1>Có gì ở đây mà nhìn</h1>
+    
+    </header>
 
-    <script>
-        let startTime, endTime;
+    <section>
+        <h2>🎮 Game</h2>
+        <ul>
+            <li><strong>Liên quân</strong>: Game rác.</li>
+            <li><strong>Genshin Impact</strong>: Game rác nhưng tốt hơn.</li>
+            <li><strong>Teamfight Tactics</strong>: Nơi nhân phẩm lên voi xuống chó.</li>
+        </ul>
+    </section>
 
-        const startButton = document.getElementById('start-button');
-        const gameButton = document.getElementById('game-button');
-        const result = document.getElementById('result');
+    <section>
+        <h2>🎥 Anime</h2>
+        <ul>
+            <li><strong>No Game No Life</strong>: My fav.</li>
+            <li><strong>Overlord</strong>: Câu chuyện tươi sáng và tích cực.</li>
+            <li><strong>Re: Zero</strong>: Câu chuyện tươi sáng và tích cực hơn cái ở trên.</li>
+        </ul>
 
-        startButton.addEventListener('click', () => {
-            result.textContent = '';
-            startButton.style.display = 'none';
+    </section>
 
-            // Chờ một thời gian ngẫu nhiên trước khi hiện nút
-            const randomTime = Math.random() * 3000 + 1000; // 1-4 giây
-            setTimeout(() => {
-                gameButton.style.display = 'inline-block';
-                startTime = new Date().getTime();
-            }, randomTime);
-        });
-
-        gameButton.addEventListener('click', () => {
-            endTime = new Date().getTime();
-            const reactionTime = (endTime - startTime) / 1000; // Tính thời gian phản ứng
-            result.textContent = `Thời gian phản ứng của bạn: ${reactionTime.toFixed(3)} giây!`;
-            gameButton.style.display = 'none';
-            startButton.style.display = 'inline-block';
-        });
-    </script>
 </body>
 </html>
-
-
