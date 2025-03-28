@@ -20,13 +20,14 @@ body {
     transform: scale(1.05);
 }
 .profile-img {
-    width: 150px;
-    height: 150px;
-    background-color: #ddd;
-    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Làm tròn ảnh */
+    object-fit: cover; /* Đảm bảo ảnh vừa khít trong khung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
     margin: 0 auto 20px;
-    animation: pulse 2s infinite;
 }
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
